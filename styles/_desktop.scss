@@ -1,0 +1,55 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    min-width: 1000px;
+    max-width: 1200px;
+  }
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard-button {
+    border: none;
+    margin: 0;
+    p {
+      margin-right: 10px;
+    }
+    body.dark & {
+      border: none;
+    }
+  }
+  .dashboard-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard-card {
+    width: 255px;
+    transition: color 0.3s ease;
+    &:hover {
+      background-color: $card-light-bg-active;
+    }
+    body.dark & {
+      &:hover {
+        background-color: $card-dark-bg-active;
+      }
+    }
+  }
+  .overview-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+  }
+  .overview-card {
+    transition: color 0.3s ease;
+    &:hover {
+      background-color: $card-light-bg-active;
+    }
+    body.dark & {
+      &:hover {
+        background-color: $card-dark-bg-active;
+      }
+    }
+  }
+}

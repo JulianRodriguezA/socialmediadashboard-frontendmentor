@@ -1,0 +1,261 @@
+.container {
+  min-width: 320px;
+  max-width: 425px;
+  margin: 0 auto;
+}
+.dashboard-header {
+  background-color: $bg-top-light;
+  padding: 20px;
+  transition: all 0.1s ease;
+  body.dark & {
+    background-color: $bg-top-dark;
+  }
+}
+.dashboard-title {
+  color: $text-light-black;
+  margin-top: 10px;
+  font-size: 25px;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark-white;
+  }
+}
+.dashboard-followers {
+  color: $text-light;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark;
+  }
+}
+.dashboard-button {
+  margin-top: 20px;
+  border-top: 1px solid $text-light;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.1s ease;
+  p {
+    font-weight: 700;
+    color: $text-light;
+    font-size: 15px;
+    transition: all 0.1s ease;
+  }
+  .switch {
+    height: 24px;
+    width: 48px;
+    border-radius: 20px;
+    border: none;
+    background: $toggle-l;
+    position: relative;
+    transition: all 0.1s ease;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background-color: $bg-top-light;
+      top: 3px;
+      right: 3px;
+      transition: all 0.1s ease;
+    }
+  }
+  body.dark & {
+    border-top: 1px solid $text-dark;
+    p {
+      color: $text-dark;
+    }
+    .switch {
+      background: $toggle-d;
+      &::after {
+        background-color: $bg-top-dark;
+        transform: translateX(-24px);
+      }
+    }
+  }
+}
+
+/*card-dashboard*/
+
+.dashboard-cards {
+  padding: 20px;
+}
+
+.dashboard-card {
+  margin-top: 24px;
+  display: block;
+  background-color: $card-light-bg;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+  body.dark & {
+    background-color: $card-dark-bg;
+  }
+}
+.card-header {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  svg {
+    margin-right: 5px;
+  }
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  margin: 0;
+  color: $text-light;
+  margin-left: 5px;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark;
+  }
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-number {
+  font-weight: 700;
+  color: $text-light-black;
+  font-size: 42px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark-white;
+  }
+}
+.card-text {
+  margin-top: 0;
+  text-transform: uppercase;
+  color: $text-light;
+  letter-spacing: 2px;
+  font-size: 12px;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark;
+  }
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    margin-right: 2px;
+  }
+}
+.card-news {
+  font-size: 10px;
+  margin-left: 2px;
+  color: $lime-Green;
+  font-weight: 700;
+}
+.card--facebook {
+  border-top: 5px solid $facebook;
+}
+.card--twitter {
+  border-top: 5px solid $twitter;
+}
+.card--youtube {
+  border-top: 5px solid $youTube;
+
+  .card-news {
+    color: $bright-Red;
+  }
+}
+.card--instagram {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-image: $instagram;
+    top: 0;
+    left: 0;
+  }
+}
+/*overview*/
+.overview-header {
+  padding: 20px;
+  font-size: 18px;
+  color: $text-light;
+  transition: all 0.1s ease;
+  body.dark & {
+    color: $text-dark;
+  }
+}
+.overview-cards {
+  padding: 0 20px 20px;
+}
+.overview-card {
+  background-color: $card-light-bg;
+  cursor: pointer;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  align-items: center;
+  transition: all 0.1s ease;
+  svg {
+    justify-self: end;
+  }
+  body.dark & {
+    background-color: $card-dark-bg;
+  }
+}
+.overview-text {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 11px;
+  color: $text-light;
+  font-weight: 700;
+  transition: all 0.1s ease;
+  margin: 0;
+  body.dark & {
+    color: $text-dark;
+  }
+}
+.overview-number {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 22px;
+  color: $text-light-black;
+  font-weight: 700;
+  transition: all 0.1s ease;
+  margin: 0;
+  body.dark & {
+    color: $text-dark-white;
+  }
+}
+.overview-info {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+.overview-porcentaje {
+  margin: 0 0 0 2px;
+  font-size: 10px;
+  font-weight: 700;
+  color: $lime-Green;
+}
+.down {
+  color: $bright-Red;
+}
